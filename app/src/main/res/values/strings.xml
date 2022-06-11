@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Quizzy</string>
+
+    <string name="welcome_text">Selamat datang di kuis millionare</string>
+    <string name="get_started">Mari mulai</string>
+
+    <string name="question_1">Question 1</string>
+    <string name="question_2">Question 2</string>
+    <string name="question_3">Question 3</string>
+    <string name="next">Selanjutnya</string>
+
+    <string name="jawaban_benar1">Jawaban benar :</string>
+    <string name="jawaban_kamu1">Jawaban kamu :</string>
+    <string name="jawaban_benar2">Jawaban benar :</string>
+    <string name="jawaban_kamu2">Jawaban kamu :</string>
+    <string name="jawaban_benar3">Jawaban benar :</string>
+    <string name="jawaban_kamu3">Jawaban kamu :</string>
+
+    <string name="q_1">What does BBC stand for?</string>
+    <string name="q_2">What\'s the name of the river that runs through Egypt?</string>
+    <string name="q_3">For one point, what five basic senses do humans have? (separated the answers by the commas [,])</string>
+    <string name="score">Skor kamu :</string>
+</resources>

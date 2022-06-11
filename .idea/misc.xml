@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/.Development/android/MyIntentApp/app/src/main/res/layout/activity_main.xml" value="0.21770833333333334" />
+        <entry key="..\:/.Development/android/MyIntentApp/app/src/main/res/layout/activity_move.xml" value="0.21770833333333334" />
+        <entry key="..\:/.Development/android/MyIntentApp/app/src/main/res/layout/activity_move_with_data.xml" value="0.17844202898550723" />
+        <entry key="..\:/.Development/android/MyIntentApp/app/src/main/res/layout/activity_question_five.xml" value="0.16621376811594202" />
+        <entry key="..\:/.Development/android/MyIntentApp/app/src/main/res/layout/activity_question_four.xml" value="0.16621376811594202" />
+        <entry key="..\:/.Development/android/MyIntentApp/app/src/main/res/layout/activity_question_one.xml" value="0.1" />
+        <entry key="..\:/.Development/android/MyIntentApp/app/src/main/res/layout/activity_question_three.xml" value="0.536" />
+        <entry key="..\:/.Development/android/MyIntentApp/app/src/main/res/layout/activity_question_two.xml" value="0.21770833333333334" />
+        <entry key="..\:/.Development/android/MyIntentApp/app/src/main/res/layout/activity_result.xml" value="0.19202898550724637" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
