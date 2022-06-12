@@ -8,72 +8,50 @@
     tools:context=".question.QuestionTwoActivity">
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/TextWidth.ScreenTitle"
         android:text="@string/question_2"
-        android:textAppearance="@style/TextAppearance.Material3.LabelMedium"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="240dp"
-        android:background="@drawable/button_rounded"
-        android:backgroundTint="@color/light_yellow"
-        android:gravity="center"
-        android:padding="8dp"
+        style="@style/TextWidth.QuestionWithBg"
         android:text="@string/q_2"
-        android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
-        android:textColor="@color/brown"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline2" />
 
     <Button
+        style="@style/AnswerButton.First"
         android:id="@+id/first_ans_btn2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/button_rounded"
         android:text="@string/ans_1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline4" />
 
     <Button
+        style="@style/AnswerButton"
         android:id="@+id/second_ans_btn2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/button_rounded"
         android:text="@string/ans_2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/first_ans_btn2" />
 
     <Button
+        style="@style/AnswerButton"
         android:id="@+id/third_ans_btn2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/button_rounded"
         android:text="@string/ans_3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/second_ans_btn2" />
 
     <androidx.constraintlayout.widget.Guideline
+        style="@style/Guideline"
         android:id="@+id/guideline2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
         app:layout_constraintGuide_begin="49dp" />
 
     <androidx.constraintlayout.widget.Guideline
+        style="@style/Guideline"
         android:id="@+id/guideline4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
         app:layout_constraintGuide_end="263dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
