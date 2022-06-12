@@ -2,6 +2,7 @@ package com.d3if0002.myintentapp.question
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
@@ -14,38 +15,52 @@ class QuestionThreeActivity : AppCompatActivity(), View.OnClickListener {
         const val ANSWER_THREE = "answer_three"
     }
 
-    private lateinit var answer: EditText
-    private lateinit var answerOne: String
-    private lateinit var answerTwo: String
+    private lateinit var firstAnsBtn: Button
+    private lateinit var secondAnsBtn: Button
+    private lateinit var thirdAnsBtn: Button
+
+    private lateinit var ans1: String
+    private lateinit var ans2: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_question_three)
 
-        answerOne = intent.getStringExtra(QuestionOneActivity.ANSWER_ONE) ?: "null"
-        answerTwo = intent.getStringExtra(QuestionTwoActivity.ANSWER_TWO) ?: "null"
+        ans1 = intent.getStringExtra(QuestionOneActivity.ANSWER_ONE)?: "datanya tidak ada1"
+        ans2 = intent.getStringExtra(QuestionTwoActivity.ANSWER_TWO)?: "datanya tidak ada2"
 
-        answer = findViewById(R.id.edt_qthree)
-        val nextBtn: Button = findViewById(R.id.btn_three)
+        firstAnsBtn = findViewById(R.id.first_ans_btn3)
+        secondAnsBtn = findViewById(R.id.second_ans_btn3)
+        thirdAnsBtn = findViewById(R.id.third_ans_btn3)
 
-        nextBtn.setOnClickListener(this)
+        firstAnsBtn.setOnClickListener(this)
+        secondAnsBtn.setOnClickListener(this)
+        thirdAnsBtn.setOnClickListener(this)
     }
 
     override fun onClick(p0: View?) {
-        if (p0?.id == R.id.btn_three) {
-            var isEmpty = false
+        var value = ""
 
-            if (answer.text.isEmpty()) {
-                answer.error = "Please fill this field."
-                isEmpty = true
-            }
-
-            val intent = Intent(this, ResultActivity::class.java)
-            intent.putExtra(ANSWER_THREE, answer.text.toString())
-            intent.putExtra(QuestionOneActivity.ANSWER_ONE, answerOne)
-            intent.putExtra(QuestionTwoActivity.ANSWER_TWO, answerTwo)
-
-            if (!isEmpty) startActivity(intent)
+        when (p0?.id) {
+            R.id.first_ans_btn3 -> value = "jawaban1 dari pertanyaan3"
+            R.id.second_ans_btn3 -> value = "jawaban2 dari pertanyaan3"
+            R.id.third_ans_btn3 -> value = "jawaban3 dari pertanyaan3"
         }
+
+        val intent = Intent(this@QuestionThreeActivity, ResultActivity::class.java)
+        /*
+            get the answer from Q1
+         */
+        intent.putExtra(QuestionOneActivity.ANSWER_ONE, ans1)
+        /*
+            get the answer from Q2
+         */
+        intent.putExtra(QuestionTwoActivity.ANSWER_TWO, ans2)
+        /*
+            get the answer from Q3
+         */
+        intent.putExtra(ANSWER_THREE, value)
+
+        this.startActivity(intent)
     }
 }

@@ -22,4 +22,7 @@
     <string name="score">Skor kamu :</string>
     <string name="share">Bagikan</string>
     <string name="finish">Selesai</string>
+    <string name="ans_1">jawaban pertama</string>
+    <string name="ans_3">jawaban ketiga</string>
+    <string name="ans_2">jawaban kedua</string>
 </resources>

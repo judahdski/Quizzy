@@ -23,9 +23,9 @@ class ResultActivity : AppCompatActivity(), View.OnClickListener {
         ans2 = intent.getStringExtra(QuestionTwoActivity.ANSWER_TWO) ?: "null"
         ans3 = intent.getStringExtra(QuestionThreeActivity.ANSWER_THREE) ?: "null"
 
-        findViewById<TextView>(R.id.your_ans2).text = ans1
-        findViewById<TextView>(R.id.your_ans3).text = ans2
-        findViewById<TextView>(R.id.your_ans1).text = ans3
+        findViewById<TextView>(R.id.your_ans1).text = ans1
+        findViewById<TextView>(R.id.your_ans2).text = ans2
+        findViewById<TextView>(R.id.your_ans3).text = ans3
 
         checkTheAnswer()
 
@@ -36,28 +36,32 @@ class ResultActivity : AppCompatActivity(), View.OnClickListener {
     private fun checkTheAnswer() {
         var count = 0
 
-        if (ans1 == "Big Black Cock") {
+        val rightAns1 = "Big Black Cock"
+        val rightAns2 = "Niel"
+        val rightAns3 = "Sense of humors"
+
+        if (ans1 == rightAns1) {
             count++
         } else {
-            val text = findViewById<TextView>(R.id.right_ans1)
-            text.text = "blabla"
-            text.visibility = View.VISIBLE
+            val rightAns = findViewById<TextView>(R.id.right_ans1)
+            rightAns.text = rightAns1
+            rightAns.visibility = View.VISIBLE
         }
 
-        if (ans2 == "Niel") {
+        if (ans2 == rightAns2) {
             count++
         } else {
-            val text = findViewById<TextView>(R.id.right_ans2)
-            text.text = "blablabla"
-            text.visibility = View.VISIBLE
+            val rightAns = findViewById<TextView>(R.id.right_ans2)
+            rightAns.text = rightAns2
+            rightAns.visibility = View.VISIBLE
         }
 
-        if (ans3 == "Niel") {
+        if (ans3 == rightAns3) {
             count++
         } else {
-            val text = findViewById<TextView>(R.id.right_ans3)
-            text.text = "blablabla"
-            text.visibility = View.VISIBLE
+            val rightAns = findViewById<TextView>(R.id.right_ans3)
+            rightAns.text = rightAns3
+            rightAns.visibility = View.VISIBLE
         }
 
         findViewById<TextView>(R.id.score_indicator).text = count.toString()
@@ -69,7 +73,7 @@ class ResultActivity : AppCompatActivity(), View.OnClickListener {
                 // implicit intent
             }
 
-            R.id.next_btn -> {
+            R.id.finish_btn -> {
                 // explicit intent
             }
         }
