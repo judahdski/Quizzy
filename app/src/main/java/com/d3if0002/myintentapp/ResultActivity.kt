@@ -1,5 +1,6 @@
 package com.d3if0002.myintentapp
 
+import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -19,13 +20,15 @@ class ResultActivity : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_result)
 
+        supportActionBar?.title = ""
+
         ans1 = intent.getStringExtra(QuestionOneActivity.ANSWER_ONE) ?: "null"
         ans2 = intent.getStringExtra(QuestionTwoActivity.ANSWER_TWO) ?: "null"
         ans3 = intent.getStringExtra(QuestionThreeActivity.ANSWER_THREE) ?: "null"
 
-        findViewById<TextView>(R.id.your_ans1).text = ans1
-        findViewById<TextView>(R.id.your_ans2).text = ans2
-        findViewById<TextView>(R.id.your_ans3).text = ans3
+        findViewById<TextView>(R.id.your_ans1).text = getString(R.string.jawaban_kamu1, ans1)
+        findViewById<TextView>(R.id.your_ans2).text = getString(R.string.jawaban_kamu2, ans2)
+        findViewById<TextView>(R.id.your_ans3).text = getString(R.string.jawaban_kamu3, ans3)
 
         checkTheAnswer()
 
@@ -44,7 +47,7 @@ class ResultActivity : AppCompatActivity(), View.OnClickListener {
             count++
         } else {
             val rightAns = findViewById<TextView>(R.id.right_ans1)
-            rightAns.text = rightAns1
+            rightAns.text = getString(R.string.jawaban_benar1, rightAns1)
             rightAns.visibility = View.VISIBLE
         }
 
@@ -52,7 +55,7 @@ class ResultActivity : AppCompatActivity(), View.OnClickListener {
             count++
         } else {
             val rightAns = findViewById<TextView>(R.id.right_ans2)
-            rightAns.text = rightAns2
+            rightAns.text = getString(R.string.jawaban_benar1, rightAns2)
             rightAns.visibility = View.VISIBLE
         }
 
@@ -60,11 +63,11 @@ class ResultActivity : AppCompatActivity(), View.OnClickListener {
             count++
         } else {
             val rightAns = findViewById<TextView>(R.id.right_ans3)
-            rightAns.text = rightAns3
+            rightAns.text = getString(R.string.jawaban_benar1, rightAns3)
             rightAns.visibility = View.VISIBLE
         }
 
-        findViewById<TextView>(R.id.score_indicator).text = count.toString()
+        findViewById<TextView>(R.id.score_indicator).text = getString(R.string.score, count.toString())
     }
 
     override fun onClick(p0: View?) {
