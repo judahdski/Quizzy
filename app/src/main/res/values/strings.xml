@@ -20,4 +20,6 @@
     <string name="q_2">What\'s the name of the river that runs through Egypt?</string>
     <string name="q_3">For one point, what five basic senses do humans have? (separated the answers by the commas [,])</string>
     <string name="score">Skor kamu :</string>
+    <string name="share">Bagikan</string>
+    <string name="finish">Selesai</string>
 </resources>

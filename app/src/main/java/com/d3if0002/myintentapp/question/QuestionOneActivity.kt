@@ -1,4 +1,4 @@
-package com.d3if0002.myintentapp.qone
+package com.d3if0002.myintentapp.question
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,7 +7,6 @@ import android.widget.Button
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
 import com.d3if0002.myintentapp.R
-import com.d3if0002.myintentapp.qtwo.QuestionTwoActivity
 
 class QuestionOneActivity : AppCompatActivity(), View.OnClickListener {
 

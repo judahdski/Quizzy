@@ -1,15 +1,15 @@
 package com.d3if0002.myintentapp
 
-import android.opengl.Visibility
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.Button
 import android.widget.TextView
-import com.d3if0002.myintentapp.qone.QuestionOneActivity
-import com.d3if0002.myintentapp.qthree.QuestionThreeActivity
-import com.d3if0002.myintentapp.qtwo.QuestionTwoActivity
+import com.d3if0002.myintentapp.question.QuestionOneActivity
+import com.d3if0002.myintentapp.question.QuestionThreeActivity
+import com.d3if0002.myintentapp.question.QuestionTwoActivity
 
-class ResultActivity : AppCompatActivity() {
+class ResultActivity : AppCompatActivity(), View.OnClickListener {
 
     private lateinit var ans1: String
     private lateinit var ans2: String
@@ -28,6 +28,9 @@ class ResultActivity : AppCompatActivity() {
         findViewById<TextView>(R.id.your_ans1).text = ans3
 
         checkTheAnswer()
+
+        findViewById<Button>(R.id.share_btn).setOnClickListener(this)
+        findViewById<Button>(R.id.finish_btn).setOnClickListener(this)
     }
 
     private fun checkTheAnswer() {
@@ -58,5 +61,17 @@ class ResultActivity : AppCompatActivity() {
         }
 
         findViewById<TextView>(R.id.score_indicator).text = count.toString()
+    }
+
+    override fun onClick(p0: View?) {
+        when (p0?.id) {
+            R.id.share_btn -> {
+                // implicit intent
+            }
+
+            R.id.next_btn -> {
+                // explicit intent
+            }
+        }
     }
 }

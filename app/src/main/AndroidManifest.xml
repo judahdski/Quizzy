@@ -17,13 +17,13 @@
             android:name=".ResultActivity"
             android:exported="false" />
         <activity
-            android:name=".qthree.QuestionThreeActivity"
+            android:name=".question.QuestionThreeActivity"
             android:exported="false" />
         <activity
-            android:name=".qtwo.QuestionTwoActivity"
+            android:name=".question.QuestionTwoActivity"
             android:exported="false" />
         <activity
-            android:name=".qone.QuestionOneActivity"
+            android:name=".question.QuestionOneActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

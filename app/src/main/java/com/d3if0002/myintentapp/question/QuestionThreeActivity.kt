@@ -1,4 +1,4 @@
-package com.d3if0002.myintentapp.qthree
+package com.d3if0002.myintentapp.question
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,11 +6,8 @@ import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
-import com.d3if0002.myintentapp.MainActivity
 import com.d3if0002.myintentapp.R
 import com.d3if0002.myintentapp.ResultActivity
-import com.d3if0002.myintentapp.qone.QuestionOneActivity
-import com.d3if0002.myintentapp.qtwo.QuestionTwoActivity
 
 class QuestionThreeActivity : AppCompatActivity(), View.OnClickListener {
     companion object {
